@@ -4,6 +4,8 @@
 <head>
     <!-- Place your kit's code here -->
     <script src="https://kit.fontawesome.com/fa59bcb677.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="./js/transition.js"></script>
 </head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -25,32 +27,44 @@
     <div id="date"></div>
     <div id="barba-wrapper">
         <div class="barba-container">
-            <div class="container-fluid m-5">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-6 m-5">
-
-                        <h1 id="title" class="page1">
-                            <span>R</span><i class="fas fa-gem"><span>CK</span></i> <br>
-                            <span>P</span><i class="far fa-paper-plane"><span>PER</span></i><br>
-                            <span>S</span><i class="fas fa-cut"><span>ISSORS</span></i><br>
-                            <span>LI</span>🦎<span>ARD</span></i> <br>
-                            <span>SP</span><i class="far fa-hand-spock"><span>CK</span></i><br>
-                            <!--Game Rules-->
-                            <div class="row d-flex justify-content-center m-5 ">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6 m-2">
+                    <h1 id="title" class="page1">
+                        <span>R</span><i class="fas fa-gem"><span>CK</span></i> <br>
+                        <span>P</span><i class="far fa-paper-plane"><span>PER</span></i><br>
+                        <span>S</span><i class="fas fa-cut"><span>ISSORS</span></i><br>
+                        <span>LI</span>🦎<span>ARD</span></i> <br>
+                        <span>SP</span><i class="far fa-hand-spock"><span>CK</span></i><br>
+                        <!--Game Rules-->
+                        <main id="swup" class="transition-fade">
+                            <div class="row d-flex justify-content-center m-5">
                                 <a href="./RulesOfGame/index.html" button id="rules" type="button"
-                                    class="btn btn-info">Rules of The
-                                    Game</button></a>
+                                    class="btn btn-info">GAME RULES</button></a>
                             </div>
-                            Make Your Choices!
-                            <!--Button of choices-->
-                            <div class="playerChoiceBtn d-flex justify-content-center">
-                                <button id="playerVsPlayer" type="button" class="btn btn-light">Player vs.
-                                    Player</button>
-                                <button id="playerVsCPU" type="button" class="btn btn-dark">Player vs. Computer</button>
+                        </main>
+                        <!--Button of choices-->
+                        <div class="playerChoiceBtn d-flex justify-content-center">
+                            <div class="row">
+                                <h2>GAME OPTIONS</h2>
+                                <button id="playerVsPlayerBtn" type="button" class="btn btn-light">PLAYER VS.
+                                    PLAYER</button>
+                                <button id="playerVsCPUBtn" type="button" class="btn btn-dark">PLAYER VS.
+                                    COMPUTER</button>
                             </div>
-                        </h1>
-
-                    </div>
+                        </div>
+                        <!--Mode Options-->
+                        <div id="roundOption" class="container">
+                            <h3>CHOOSE NUMBER OF ROUNDS</h3>
+                            <div class="row d-flex align-items-center flex-column">
+                                <button id="oneRoundBtn" type="button" class="btn btn-outline-success">1 WIN</button>
+                                <button id="bestOf5Btn" type="button" class="btn btn-outline-success">3 OUT OF
+                                    5</button>
+                                <button id="bestOf7Btn" type="button" class="btn btn-outline-success">4 OUT OF
+                                    7</button>
+                            </div>
+                            <button id="startGameBtn" type="button" class="btn btn-info">START GAME</button>
+                        </div>
+                    </h1>
                 </div>
             </div>
         </div>
