@@ -21,6 +21,16 @@ let startGameBtn = document.getElementById('startGameBtn');
 
 let roundOption = 0;
 //create an event listener for each button
+//Toggle between pages
+document.getElementById('rules').addEventListener('click', function(){
+    document.getElementById('mainCont').style.display = 'none';
+    document.getElementById('gameRulesPage').style.display = 'flex';
+});
+document.getElementById('readyToPlay').addEventListener('click', function(){
+    document.getElementById('mainCont').style.display = 'flex';
+    document.getElementById('gameRulesPage').style.display = 'none';
+});
+
 playerVsPlayerBtn.addEventListener('click', function(){
     console.log('Lets have a good game!');
 });
