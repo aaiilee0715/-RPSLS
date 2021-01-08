@@ -15,9 +15,10 @@ let spock = document.getElementById('spock');
 let oneRoundBtn = document.getElementById('oneRoundBtn');
 let bestOf5Btn = document.getElementById('bestOf5Btn');
 let bestOf7Btn = document.getElementById('bestOf7Btn');
+
 //Cpu------------
 let url = 'https://csa2020studentapi.azurewebsites.net/rpsls';
-let computerChoice = ''; //whatever string response text return
+let computerChoice; //whatever string response text return
 let selectionChoices;
 let roundOption = 0;
 
@@ -86,13 +87,14 @@ document.getElementById('spock').addEventListener('click', function () {
 // console.log(outCome);
 //create a function for variable computer game
 function compareRound(computerChoice, selectionChoices) {
+    console.log("Get Winner: player", selectionChoices, "computer", computerChoice);
     if (computerChoice == selectionChoices) {
         document.getElementById('userChoice').style.display = 'none';
         document.getElementById('resultScore').style.display = 'flex';
         document.getElementById('playerChoice').innerText = selectionChoices;
         document.getElementById('computerChoice').innerText = computerChoice;
-        document.getElementById('tie').innerText = 'Tie';
-        compareRound();
+        document.getElementById('draw').innerText = 'draw';
+        return (computerChoice, selectionChoices);
     }
     else if (selectionChoices == "rock") {
         if (computerChoice == "paper") {
@@ -100,7 +102,7 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+            
 
         }
         else if (computerChoice == "scissors") {
@@ -108,21 +110,21 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+            
         }
         else if (computerChoice == "lizard") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
     }
     else if (selectionChoices == "paper") {
@@ -131,7 +133,7 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
 
         else if (computerChoice == "scissors") {
@@ -139,21 +141,21 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "lizard") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
     }
     else if (selectionChoices == "scissors") {
@@ -162,28 +164,28 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "paper") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "lizard") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
     }
     else if (selectionChoices == "lizard") {
@@ -192,28 +194,28 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "paper") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "scissors") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
     }
     else if (selectionChoices == "spock") {
@@ -222,23 +224,25 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "paper") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
         else if (computerChoice == "scissors") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = selectionChoices;
             document.getElementById('computerChoice').innerText = computerChoice;
-            compareRound();
+
         }
     }
+
+
 }
 // console.log(compareRound);
 
