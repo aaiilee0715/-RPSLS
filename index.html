@@ -36,73 +36,113 @@
 
     <div id="date"></div>
     <div id="gameRulesPage">
-        <div class="barba-container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-6 m-5">
-                    <h1 id="titleP2">
-                        <span>R</span><i class="fas fa-gem"><span>CK</span></i> <br>
-                        <span>P</span><i class="far fa-paper-plane"><span>PER</span></i><br>
-                        <span>S</span><i class="fas fa-cut"><span>ISSORS</span></i><br>
-                        <span>LI</span>🦎<span>ARD</span></i> <br>
-                        <span>SP</span><i class="far fa-hand-spock"><span>CK</span></i><br>
+        <div class="row d-flex justify-content-center">
+            <div class="col-6 m-5">
+                <h1 id="titleP2">
+                    <span>R</span><i class="fas fa-gem"><span>CK</span></i> <br>
+                    <span>P</span><i class="far fa-paper-plane"><span>PER</span></i><br>
+                    <span>S</span><i class="fas fa-cut"><span>ISSORS</span></i><br>
+                    <span>LI</span>🦎<span>ARD</span></i> <br>
+                    <span>SP</span><i class="far fa-hand-spock"><span>CK</span></i><br>
+                    <div class="row d-flex justify-content-center m-2">
+                        <button id="rulesPlayBtn" type="button" class="btn btn-outline-info">Ready To Play</button>
+
                         <!--Game Rules-->
-                        <div class="row d-flex justify-content-center m-2">
-                            <button id="readyToPlay" type="button" class="btn btn-outline-info">Ready To Play</button>
-                            <h2>How To Play The Game<br>(It's Very Simple)</h2>
-                            <ul class="steps">
-                                <li>(1.) Scissors cuts Paper (✌ > ✋)</li>
-                                <li>(2.) Paper covers Rock (✋ > ✊)</li>
-                                <li>(3.) Rock crushes Lizard (✊ > 🦎)</li>
-                                <li>(4.) Lizard poisons Spock (🦎 > 🖖)</li>
-                                <li>(5.) Spock smashes Scissors (🖖 > ✌)</li>
-                                <li>(6.) Scissors decapitates Lizard (✌ > 🦎)</li>
-                                <li>(7.) Lizard eats Paper (🦎 > ✋)</li>
-                                <li>(8.) Paper disproves Spock (✋ > 🖖)</li>
-                                <li>(9.) Spock vaproizes Rock (🖖 > ✊)</li>
-                                <li>(10.) Rock crushes Scissors (✊ > ✌)</li>
-                            </ul>
-                    </h1>
-                </div>
+                        <h2>How To Play The Game<br>(It's Very Simple)</h2>
+                        <ul class="steps">
+                            <li>(1.) Scissors cuts Paper (✌ > ✋)</li>
+                            <li>(2.) Paper covers Rock (✋ > ✊)</li>
+                            <li>(3.) Rock crushes Lizard (✊ > 🦎)</li>
+                            <li>(4.) Lizard poisons Spock (🦎 > 🖖)</li>
+                            <li>(5.) Spock smashes Scissors (🖖 > ✌)</li>
+                            <li>(6.) Scissors decapitates Lizard (✌ > 🦎)</li>
+                            <li>(7.) Lizard eats Paper (🦎 > ✋)</li>
+                            <li>(8.) Paper disproves Spock (✋ > 🖖)</li>
+                            <li>(9.) Spock vaproizes Rock (🖖 > ✊)</li>
+                            <li>(10.) Rock crushes Scissors (✊ > ✌)</li>
+                        </ul>
+                </h1>
             </div>
         </div>
     </div>
     </div>
+
     <!---Main Page-->
     <div id="mainCont" class="container-fluid">
         <div class="row d-flex justify-content-center">
-            <div class="col-6 m-2">
+            <div class="col-12 m-2">
                 <h1 id="title" class="page1">
                     <span>R</span><i class="fas fa-gem"><span>CK</span></i> <br>
                     <span>P</span><i class="far fa-paper-plane"><span>PER</span></i><br>
                     <span>S</span><i class="fas fa-cut"><span>ISSORS</span></i><br>
                     <span>LI</span>🦎<span>ARD</span></i> <br>
                     <span>SP</span><i class="far fa-hand-spock"><span>CK</span></i><br>
-                    <!--Button of choices-->
-                    <div class="playerChoiceBtn d-flex justify-content-center">
-                        <div class="row">
-                            <h2>GAME OPTIONS</h2>
-                            <button id="playerVsPlayerBtn" type="button" class="btn btn-light">PLAYER VS.
-                                PLAYER</button>
-                            <button id="playerVsCPUBtn" type="button" class="btn btn-dark">PLAYER VS.
-                                COMPUTER</button>
-                        </div>
+                    <div class="row d-flex justify-content-center m-2">
+                        <button id="readyToPlay" type="button" class="btn btn-outline-info">Ready To Play</button>
                     </div>
-                    <!--Mode Options-->
-                    <div id="roundOption" class="container">
-                        <h3>CHOOSE NUMBER OF ROUNDS</h3>
-                        <div class="row d-flex align-items-center flex-column">
-                            <button id="oneRoundBtn" type="button" class="btn btn-outline-success">1 WIN</button>
-                            <button id="bestOf5Btn" type="button" class="btn btn-outline-success">3 OUT OF
-                                5</button>
-                            <button id="bestOf7Btn" type="button" class="btn btn-outline-success">4 OUT OF
-                                7</button>
-                        </div>
-                        <button id="startGameBtn" type="button" class="btn btn-info">START GAME</button>
-                    </div>
+            </div>
+        </div>
+    </div>
+    <!--Button of choices-->
+    <div id="playerMode" class="container">
+        <div class="row d-flex justify-content-center m-5">
+            <div class="col-12">
+                <h2 id="gameOptionTitle">GAME OPTIONS</h2>
+                <button id="playerVsPlayerBtn" type="button" class="btn btn-light">PLAYER VS.
+                    PLAYER</button>
+                <button id="playerVsCPUBtn" type="button" class="btn btn-dark">PLAYER VS.
+                    COMPUTER</button>
+            </div>
+        </div>
+    </div>
+    <!--Mode Options-->
+    <div id="roundOption" class="container">
+        <div class="row d-flex align-items-center flex-column">
+            <h3 id="roundTitle">CHOOSE NUMBER OF ROUNDS</h3>
+            <div class="col-12">
+                <button id="oneRoundBtn" type="button" class="btn btn-outline-success">1 WIN</button>
+                <button id="bestOf5Btn" type="button" class="btn btn-outline-success">3 OUT OF
+                    5</button>
+                <button id="bestOf7Btn" type="button" class="btn btn-outline-success">4 OUT OF
+                    7</button>
                 </h1>
             </div>
         </div>
     </div>
+    <!--Player Choices--->
+    <div id="userChoice" class="container">
+        <div class="row d-flex justify-content-center flex-column m-5">
+            <h3 id="userChoiceTitle">YOUR CHOICE: Will YOU CHOOSE<br>R💎CK, P📃PER, S✂️ISSORS, LI🦎ARD, OR
+                SP🖖🏼CK?<br><br>
+                PLAY AGAINST THE COMPUTER BY CLICKING ONE OF THESE BUTTONS</h3>
+            <div id="selectionChoices" class="col-12">
+                <button id="rock" type="button" class="btn btn-success">Rock</button>
+                <button id="paper" type="button" class="btn btn-success">Paper</button>
+                <button id="scissors" type="button" class="btn btn-success">Scissors</button>
+                <button id="lizard" type="button" class="btn btn-success">Lizard</button>
+                <button id="spock" type="button" class="btn btn-success">Spock</button>
+            </div>
+        </div>
+    </div>
+    <!---Results-->
+    <div id="resultScore" class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <h2 id="playerChoice"></h2>
+                <h2>...vs...</h2>
+                <h2 id="computerChoice"></h2>
+            </div>
+        </div>
+
+        <div class="row d-flex align-items-center flex-column">
+            <p id="tie"></p>
+            <div class="col-12 d-flex justify-content-center align-items-center pt-3">
+                <button onclick="window.location.reload()" class="btn btn-success-btnChoose">PLAY AGAIN?</button>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
