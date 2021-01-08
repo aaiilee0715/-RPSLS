@@ -18,10 +18,13 @@ let bestOf7Btn = document.getElementById('bestOf7Btn');
 //Cpu------------
 let url = 'https://csa2020studentapi.azurewebsites.net/rpsls';
 let computerChoice = ''; //whatever string response text return
-let selectionChoices = '';
+let selectionChoices;
 let roundOption = 0;
 
-
+playerVsPlayerBtn.addEventListener('click', function () {
+    alert('Lets have a good game!');
+    // console.log('Lets have a good game!');
+});
 playerVsCPUBtn.addEventListener('click', function () {
     alert("Computer accept human challenge...");
     // console.log('Computer accept human challenge...');
@@ -31,131 +34,213 @@ playerVsCPUBtn.addEventListener('click', function () {
             function (value) {
                 console.log(value); //will show the url value in console
                 computerChoice = value; //cpu choice will equall to whatever value is fetch
+                playRound();
             }
         )
     })
 });
-console.log(fetch("https://csa2020studentapi.azurewebsites.net/rpsls")); //show on console side what value is return
 
-playerVsPlayerBtn.addEventListener('click', function () {
-    alert('Lets have a good game!');
-    // console.log('Lets have a good game!');
-});
 function playRound() {
     document.getElementById('roundOption').style.display = "flex";
 
     oneRoundBtn.addEventListener('click', function () {
-        console.log('You no fun');
+        alert('You no fun');
         roundOption = 1;
     });
     bestOf5Btn.addEventListener('click', function () {
-        console.log('Who will get 3 first?');
+        alert('Who will get 3 first?');
         roundOption = 5;
     });
     bestOf7Btn.addEventListener('click', function () {
-        console.log('You must be bored...Lets-a go!');
+        alert('You must be bored...Lets-a go!');
         roundOption = 7;
     });
 }
-function outCome() {
-    document.getElementById('rock').addEventListener('click', function () {
-        selectionChoices = "rock";
-        computerGame(computerChoice, selectionChoices);
-    })
-    document.getElementById('paper').addEventListener('click', function () {
-        selectionChoices = "paper";
-        computerGame(computerChoice, selectionChoices);
-    })
-    document.getElementById('scissors').addEventListener('click', function () {
-        selectionChoices = "scissors";
-        computerGame(computerChoice, selectionChoices);
-    })
-    document.getElementById('lizard').addEventListener('click', function () {
-        selectionChoices = "lizard";
-        computerGame(computerChoice, selectionChoices);
-    })
-    document.getElementById('spock').addEventListener('click', function () {
-        selectionChoices = "spock";
-        computerGame(computerChoice, selectionChoices);
-    })
-}
-console.log(outCome);
+
+
+console.log(fetch("https://csa2020studentapi.azurewebsites.net/rpsls")); //show on console side what value is return
+
+
+// function outCome() {
+document.getElementById('rock').addEventListener('click', function () {
+    selectionChoices = "rock";
+    compareRound(computerChoice, selectionChoices);
+})
+document.getElementById('paper').addEventListener('click', function () {
+    selectionChoices = "paper";
+    compareRound(computerChoice, selectionChoices);
+})
+document.getElementById('scissors').addEventListener('click', function () {
+    selectionChoices = "scissors";
+    compareRound(computerChoice, selectionChoices);
+})
+document.getElementById('lizard').addEventListener('click', function () {
+    selectionChoices = "lizard";
+    compareRound(computerChoice, selectionChoices);
+})
+document.getElementById('spock').addEventListener('click', function () {
+    selectionChoices = "spock";
+    compareRound(computerChoice, selectionChoices);
+})
+// }
+// console.log(outCome);
 //create a function for variable computer game
-function computerGame(computerChoice, selectionChoices) {
+function compareRound(computerChoice, selectionChoices) {
     if (computerChoice == selectionChoices) {
-        console.log('Its a tie');
+        document.getElementById('userChoice').style.display = 'none';
+        document.getElementById('resultScore').style.display = 'flex';
+        document.getElementById('playerChoice').innerText = selectionChoices;
+        document.getElementById('computerChoice').innerText = computerChoice;
+        document.getElementById('tie').innerText = 'Tie';
+        compareRound();
     }
     else if (selectionChoices == "rock") {
         if (computerChoice == "paper") {
-            console.log('Computer Win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
 
         }
         else if (computerChoice == "scissors") {
-            console.log('You win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
         else if (computerChoice == "lizard") {
-            console.log('You win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
         else {
             document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
     }
     else if (selectionChoices == "paper") {
         if (computerChoice == "rock") {
-            console.log('You win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
 
         else if (computerChoice == "scissors") {
-            console.log('Computer Win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
         else if (computerChoice == "lizard") {
-            console.log('Computer Win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
         else {
-            console.log('You Win');
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
     }
-    else if(selectionChoices == "scissors"){
-        if(computerChoice == "rock"){
-            console.log('Computer Win');
+    else if (selectionChoices == "scissors") {
+        if (computerChoice == "rock") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else if(computerChoice == "paper"){
-            console.log('You win');
+        else if (computerChoice == "paper") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else if(computerChoice == "lizard"){
-            console.log('You Win');
+        else if (computerChoice == "lizard") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else{
-            console.log('Computer Win');
+        else {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
     }
-    else if(selectionChoices == "lizard"){
-        if(computerChoice == "rock"){
-            console.log('Computer Win');
+    else if (selectionChoices == "lizard") {
+        if (computerChoice == "rock") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else if(computerChoice == "paper"){
-            console.log('You Win');
+        else if (computerChoice == "paper") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else if (computerChoice == "scissors"){
-            console.log('Computer Win');
+        else if (computerChoice == "scissors") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else{
-            console.log('You Win');
+        else {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
     }
-    else if(selectionChoices == "spock"){
-        if(computerChoice == "rock"){
-            console.log('You Win');
+    else if (selectionChoices == "spock") {
+        if (computerChoice == "rock") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else if(computerChoice == "paper"){
-            console.log('Computer Win');
+        else if (computerChoice == "paper") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
-        else if(computerChoice == "scissors"){
-            console.log('You Win');
+        else if (computerChoice == "scissors") {
+            document.getElementById('resultScore').style.display = 'flex';
+            document.getElementById('userChoice').style.display = 'none';
+            document.getElementById('playerChoice').innerText = selectionChoices;
+            document.getElementById('computerChoice').innerText = computerChoice;
+            compareRound();
         }
     }
 }
-console.log(computerGame);
+// console.log(compareRound);
 
 //create an event listener for each button to toggle between pages
 document.getElementById('rules').addEventListener('click', function () {

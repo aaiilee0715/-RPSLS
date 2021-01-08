@@ -159,11 +159,9 @@ body {
     font-size: 2rem;
 }
 #userChoiceTitle{
-    
-    justify-content:center;
-    align-items: center;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     margin-top: 2rem;
+    
 }
 
 #selectionChoices {
@@ -173,7 +171,7 @@ body {
 
 }
 #rock, #paper, #scissors, #lizard, #spock{
-    font-size: 4rem;
+    font-size: 1.7rem;
 }
 
 #rock:hover, #rock:active, #rock:focus { 
@@ -196,7 +194,7 @@ body {
     font-weight: 20rem;
     text-shadow: 0px 9px 9px rgb(97, 64, 3);
 }
-#scores{
+/* #scores{
     justify-content: center;
     align-items: center;
     display: none;
@@ -204,7 +202,26 @@ body {
     text-shadow: 0px 4px 9px rgb(255, 255, 255);
     font-weight: bold;
     font-size: 2rem;
-}
+} */
 #resultScore{
+    justify-content: center;
+    align-items: center;
     display: none;
+    color: white;
+    text-shadow: 0px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 4rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+#playerChoice, #computerChoice{
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+.btn-info:hover{
+    color: rgb(13, 245, 13);
+    text-shadow: 0px 9px 9px rgb(30, 31, 30);
 }
