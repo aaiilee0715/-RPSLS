@@ -124,12 +124,14 @@ body {
     font-weight: bold;
     font-size: 2rem;
 }
-#gameOptionTitle{
+
+#gameOptionTitle {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     margin-top: 5rem;
 }
+
 #roundOption {
     justify-content: center;
     align-items: center;
@@ -139,13 +141,15 @@ body {
     font-weight: bold;
     font-size: 2rem;
 }
-#roundTitle{
+
+#roundTitle {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     margin-top: 5rem;
 }
-#oneRoundBtn, #bestOf5Btn, #bestOf7Btn{
+
+#oneRoundBtn, #bestOf5Btn, #bestOf7Btn {
     font-size: 2rem;
 }
 
@@ -158,42 +162,47 @@ body {
     font-weight: bold;
     font-size: 2rem;
 }
-#userChoiceTitle{
+
+#userChoiceTitle {
     font-size: 1.9rem;
     margin-top: 2rem;
-    
 }
 
 #selectionChoices {
     font-size: 4rem;
     cursor: pointer;
-    text-align: center;  
-
+    text-align: center;
 }
-#rock, #paper, #scissors, #lizard, #spock{
+
+#rock, #paper, #scissors, #lizard, #spock {
     font-size: 1.7rem;
 }
 
-#rock:hover, #rock:active, #rock:focus { 
+#rock:hover, #rock:active, #rock:focus {
     font-weight: 20rem;
     text-shadow: 0px 9px 9px rgb(255, 255, 255);
 }
-#paper:hover, #paper:active, #paper:focus { 
+
+#paper:hover, #paper:active, #paper:focus {
     font-weight: 20rem;
     text-shadow: 0px 9px 9px rgb(255, 4, 4);
 }
-#scissors:hover, #scissors:active, #scissors:focus { 
+
+#scissors:hover, #scissors:active, #scissors:focus {
     font-weight: 20rem;
     text-shadow: 0px 9px 9px rgb(92, 117, 129);
 }
-#lizard:hover, #lizard:active, #lizard:focus { 
+
+#lizard:hover, #lizard:active, #lizard:focus {
     font-weight: 20rem;
     text-shadow: 0px 9px 9px rgb(63, 255, 4);
 }
-#spock:hover, #spock:active, #spock:focus { 
+
+#spock:hover, #spock:active, #spock:focus {
     font-weight: 20rem;
     text-shadow: 0px 9px 9px rgb(97, 64, 3);
 }
+
 /* #scores{
     justify-content: center;
     align-items: center;
@@ -203,30 +212,59 @@ body {
     font-weight: bold;
     font-size: 2rem;
 } */
-#resultScore{
+
+#resultScore {
     justify-content: center;
     align-items: center;
     display: none;
     color: white;
     text-shadow: 0px 4px 9px rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 4rem;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    margin-top: 5rem;
-}
-#playerChoice, #computerChoice{
-    font-size: 3rem;
-    margin-top: 5rem;
-}
-
-.resetBtn{
-    justify-content: center;
-    margin-top: 25rem;
+    
     
 }
-.resetBtn:hover{
+
+#results {
+    color: rgb(229, 255, 0);
+    text-shadow: 0px 4px 9px rgb(177, 250, 7);
+    font-weight: bold;
+    font-size: 4rem;
+    
+}
+
+#playerChoice, #computerChoice {
+    font-size: 3rem;
+    margin-top: 5rem;
+    display: flex;
+}
+
+.resetBtn {
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.resetBtn:hover {
     color: rgb(13, 245, 13);
     text-shadow: 0px 9px 9px rgb(30, 31, 30);
+}
+
+#scoreCounter{
+    justify-content: flex-end;
+    color: rgb(255, 174, 0);
+    text-shadow: 0px 4px 9px rgb(94, 255, 0);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+#best5Choice, #best4Choice{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: rgb(240, 166, 6);
+    text-shadow: 0px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
