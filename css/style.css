@@ -1,40 +1,64 @@
 body {
     background-image: url(../image/b5f08a0da4a2c883bf01940705363a59.jpg);
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: cover;
-  }
-  
-#title, #titleP2{
+}
+
+#title, #titleP2 {
     text-align: center;
     align-content: center;
     font-size: 50px;
     color: white;
     text-shadow: 0px 4px 9px rgb(255, 255, 255);
-   
 }
-.playerChoiceBtn{
+
+#rules:hover {
+    color: rgb(94, 255, 0);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
+}
+
+#playerChoiceBtn {
     align-content: center;
     margin: 1rem;
 }
-.page1, .page2{
- position: absolute;
- 
+
+#playerVsPlayerBtn:hover, #playerVsPlayerBtn:active, #playerVsPlayerBtn:focus {
+    color: rgb(0, 255, 255);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
 }
 
-
-.slide-in{
-    animation: slide-in 0.4s ease forwards;
+#playerVsCPUBtn:hover, #playerVsCPUBtn:active, #playerVsCPUBtn:focus {
+    color: rgb(0, 255, 136);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
 }
 
-@keyframes slide-in{
-    from{
-        transform: translateX(100%);
-        visibility: visible;
-    }
-    to {
-        transform: translateX(0%);
-    }
+#oneRoundBtn:hover, #oneRoundBtn:active, #oneRoundBtn:focus {
+    color: rgb(255, 0, 242);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
 }
+
+#bestOf5Btn:hover, #bestOf5Btn:active, #bestOf5Btn:focus {
+    color: rgb(157, 255, 0);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
+}
+
+#bestOf7Btn:hover, #bestOf7Btn:active, #bestOf7Btn:focus {
+    color: rgb(255, 94, 0);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
+}
+
+#startGameBtn:hover {
+    color: rgb(255, 0, 98);
+    font-weight: bolder;
+    text-shadow: 0px 4px 9px rgb(15, 15, 15);
+}
+
 #date {
     color: white;
     text-shadow: 5px 4px 9px rgb(255, 255, 255);
@@ -42,7 +66,212 @@ body {
     font-size: 2rem;
     /* text-align: center; */
 }
-.steps{
+
+/*rules page*/
+
+.steps {
     font-size: 1rem;
     list-style: none;
+}
+
+.fa {
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    cursor: pointer;
+    border-radius: 10rem;
+}
+
+.results {
+    color: rgb(247, 247, 247);
+    font-size: 4rem;
+}
+
+.userScore, .cpuScore {
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+}
+
+.fa:hover {
+    color: violet;
+}
+
+.userScore, .cpuScore {
+    color: yellowgreen;
+}
+
+#gameRulesPage {
+    justify-content: center;
+    display: flex;
+    display: none;
+}
+
+#mainCont {
+    justify-content: center;
+    display: flex;
+}
+
+.Button:active, .active {
+    background-color: red;
+    color: white;
+}
+
+#playerMode {
+    justify-content: center;
+    display: none;
+    align-items: center;
+    color: white;
+    text-shadow: 5px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#gameOptionTitle {
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+#roundOption {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+    text-shadow: 5px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#roundTitle {
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+#oneRoundBtn, #bestOf5Btn, #bestOf7Btn {
+    font-size: 2rem;
+}
+
+#userChoice {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+    text-shadow: 5px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+#userChoiceTitle {
+    font-size: 1.9rem;
+    margin-top: 2rem;
+}
+
+#selectionChoices {
+    font-size: 4rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+#rock, #paper, #scissors, #lizard, #spock {
+    font-size: 1.7rem;
+}
+
+#rock:hover, #rock:active, #rock:focus {
+    font-weight: 20rem;
+    text-shadow: 0px 9px 9px rgb(255, 255, 255);
+}
+
+#paper:hover, #paper:active, #paper:focus {
+    font-weight: 20rem;
+    text-shadow: 0px 9px 9px rgb(255, 4, 4);
+}
+
+#scissors:hover, #scissors:active, #scissors:focus {
+    font-weight: 20rem;
+    text-shadow: 0px 9px 9px rgb(92, 117, 129);
+}
+
+#lizard:hover, #lizard:active, #lizard:focus {
+    font-weight: 20rem;
+    text-shadow: 0px 9px 9px rgb(63, 255, 4);
+}
+
+#spock:hover, #spock:active, #spock:focus {
+    font-weight: 20rem;
+    text-shadow: 0px 9px 9px rgb(97, 64, 3);
+}
+
+/* #scores{
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+    text-shadow: 0px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2rem;
+} */
+
+#resultScore {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+    text-shadow: 0px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+#results {
+    color: rgb(229, 255, 0);
+    text-shadow: 0px 4px 9px rgb(177, 250, 7);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+#playerChoice, #computerChoice {
+    font-size: 2rem;
+    margin-top: 5rem;
+    color: rgb(0, 255, 255);
+    
+}
+
+.resetBtn {
+    justify-content: center;
+    margin-left: 8rem;
+    margin-bottom: 9rem;
+}
+
+.resetBtn:hover {
+    color: rgb(13, 245, 13);
+    text-shadow: 0px 9px 9px rgb(30, 31, 30);
+}
+
+#scoreCounter {
+    justify-content: flex-end;
+    color: rgb(255, 174, 0);
+    text-shadow: 0px 4px 9px rgb(94, 255, 0);
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: none;
+}
+
+#best5Choice, #best4Choice {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: rgb(240, 166, 6);
+    text-shadow: 0px 4px 9px rgb(255, 255, 255);
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+#nextRoundBtn{
+    display: none;
+}
+#playAgain3Btn{
+    display: none;
 }
