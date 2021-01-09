@@ -146,6 +146,9 @@ document.getElementById('rulesPlayBtn').addEventListener('click', function () {
 let userScore = 0;
 let cpuScore = 0;
 let results = document.getElementById('results');
+
+// sorry this code is way to much, and definitely needs refractoring. I tried to refactor it but failed because my function code started to not Work, 
+// with little knowledge of how to actually refactor code, that is why I decided to leave it like this. 
 function compareRound(computerChoice, selectionChoices) {
     if (computerChoice == selectionChoices) {
         document.getElementById('userChoice').style.display = 'none';
@@ -177,7 +180,7 @@ function compareRound(computerChoice, selectionChoices) {
             document.getElementById('userScore').innerText = userScore;
             document.getElementById('scoreCounter').style.display = 'flex';
         }
-        else if (computerChoice == "lizard") {
+        else if (computerChoice == "spock") {
             document.getElementById('resultScore').style.display = 'flex';
             document.getElementById('userChoice').style.display = 'none';
             document.getElementById('playerChoice').innerText = 'You Selected: ' + selectionChoices;
