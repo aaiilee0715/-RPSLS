@@ -269,3 +269,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+#nextRoundBtn{
+    display: none;
+}
+#playAgain3Btn{
+    display: none;
+}
