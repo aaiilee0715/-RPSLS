@@ -366,7 +366,7 @@ function compareRound(computerChoice, selectionChoices) {
 //     userRound3Choice = "spock";
 //     cpu3RoundGame(computerChoice, userRound3Choice);
 // })
-//create a anothay function for 3 round
+//create a another function for 3 round
 // function pvC3Round() {
 //     console.log('you are in 3 round game'); //this is working
 //     if (numToWin == 3) {
